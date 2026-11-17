@@ -18,3 +18,7 @@ The installer selects the tag in `current-release` and prompts for a license
 key before requesting access to private images. MEDora's release workflow
 publishes installer artifacts and updates that pointer. The Pages workflow
 publishes `docs/` from the `main` branch.
+
+Before the first deployment, a repository administrator must enable GitHub
+Pages in the repository settings and select GitHub Actions as the build source.
+The workflow token cannot enable Pages itself.
