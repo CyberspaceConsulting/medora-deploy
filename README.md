@@ -44,17 +44,20 @@ Details zu Voraussetzungen, Ports und Konfiguration stehen in der
 
 ## Releases und Tags
 
-Der Installer verwendet standardmäßig den Tag aus
-[`current-release`](./current-release). Dieser verweist auf das aktuell
-veröffentlichte Release und kann auch eine Alpha-Version sein.
-Alle verfügbaren Versionen und ihre Hinweise findest du unter
+Der Installer verwendet standardmäßig das neueste stabile Release. Mit `-alpha`
+installierst du das neueste Alpha-/Test-Release; ein erneuter Aufruf im
+bestehenden Installationsverzeichnis behält dessen Kanal bei. `-stable` und
+`-latest` erzwingen den stabilen Kanal. Alle verfügbaren Versionen und ihre
+Hinweise findest du unter
 [Releases](https://github.com/CyberspaceConsulting/medora-deploy/releases).
 
-Um eine bestimmte Version auszuwählen, ersetze `RELEASE_TAG` durch einen
-veröffentlichten Tag:
+Um eine bestimmte Version auszuwählen, setze `MEDORA_RELEASE_TAG` auf einen
+veröffentlichten Tag. Die Kanaloptionen lassen sich ebenfalls mit dem Installer
+verwenden:
 
 ```sh
 curl --fail --location --silent --show-error https://raw.githubusercontent.com/CyberspaceConsulting/medora-deploy/main/install.sh | MEDORA_RELEASE_TAG=RELEASE_TAG sh
+curl --fail --location --silent --show-error https://raw.githubusercontent.com/CyberspaceConsulting/medora-deploy/main/install.sh | sh -s -- -alpha
 ```
 
 Ältere Alpha-Releases können bekannte Installations- oder Datenbankprobleme
